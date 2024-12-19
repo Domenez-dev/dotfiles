@@ -1,0 +1,60 @@
+[manager]
+show_hidden = false
+linemode = "size"
+
+[open]
+rules = [
+    { mime = "image/*", use = "view_image" },
+    { mime = "text/*", use = "edit" },
+    { mime = "inode/directory", use = "change_dir" },
+    { mime = "video/*", use = "video_player"},
+    { name = "*.md", use = "md_viewer"},
+    { name = "*.pdf", use = "pdf_reader"},
+    { name = "*.zip", use = "extract"},
+    { name = "*.sh", use = "excute" },
+    { name = "*", use = "edit" }  # Fallback rule
+]
+
+[opener]
+excute = [
+    { run = './"$@"'},
+]
+edit = [
+    { run = 'nvim "$@"', block = true, for = "unix" },
+]
+view_image = [
+    { run = 'loupe "$@"', orphan = true, for = "unix" }
+]
+change_dir = [
+    { run = 'cd "$@" && exec bash', block = true, for = "unix" },
+    { run = 'nautilus "$@"', orphan = true, for = "unix" },
+    { run = 'obsidian "$@"', desc = "open vault with obsidian", orphan = true, for = "unix"}
+]
+video_player = [
+    { run = 'vlc "$@"', orphan = true , for = 'unix'}
+]
+pdf_reader = [
+    { run = 'okular "$@"', orphan = true, for = 'unix'}
+]
+extract = [
+	  { run = 'unzip "$@"', desc = "Extract here", for = "unix" },
+]
+md_viewer = [
+    { run = 'zen "$@"', orphan = true, desc = "preview in zed", for ="unix"}
+]
+
+[plugins]
+append_preview = [
+    # Archive previewer
+  	{ mime = "application/*zip",            run = "unzip"},
+  	{ mime = "application/x-tar",           run = "unzip" },
+  	{ mime = "application/x-bzip2",         run = "unzip" },
+  	{ mime = "application/x-7z-compressed", run = "unzip" },
+  	{ mime = "application/x-rar",           run = "unzip" },
+  	{ mime = "application/x-xz",            run = "unzip" },
+]
+
+prepend_previewers = [
+    { name = "*.md", run = "glow" },
+]
+

@@ -1,0 +1,29 @@
+[[manager.prepend_keymap]]
+on   = [ "g", "/" ]
+run  = "cd /"
+desc = "Cd to root"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "c" ]
+run  = "cd /home/Zakkye/dotfiles/.config/"
+desc = "Cd to config file"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "z" ]
+run  = "cd /mnt/Common/"
+desc = "access Common disk"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "k" ]
+run  = "cd ~/Documents/rsd/"
+desc = "access kraya" 
+
+[[manager.prepend_keymap]]
+on   = [ "g", "e" ]
+run  = "cd ~/Documents/"
+desc = "access Docs"
+
+[[manager.prepend_keymap]]
+on = ["C"]
+run = "plugin ouch --args=zip"
+desc = "Compress with ouch"
