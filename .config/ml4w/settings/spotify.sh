@@ -1,1 +1,1 @@
-spotify-launcher
+discord

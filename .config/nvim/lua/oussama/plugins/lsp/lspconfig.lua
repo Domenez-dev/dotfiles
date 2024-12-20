@@ -116,11 +116,13 @@ return {
 		})
 		lspconfig.gopls.setup({
 			on_attach = on_attach,
+			capabilities = capabilities,
 			cmd = { "gopls" }, -- Command to start the language server
 			filetypes = { "go", "gomod", "gowork", "gotmpl" }, -- File types to activate gopls
 			root_dir = lspconfig.util.root_pattern("go.work", "go.mod", ".git"),
 			settings = {
 				gopls = {
+					completeUnimported = true,
 					analyses = {
 						unusedparams = true,
 						nilness = true,

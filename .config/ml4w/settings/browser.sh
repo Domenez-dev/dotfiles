@@ -1,1 +1,1 @@
-~/.local/share/AppImage/ZenBrowser.AppImage
+zen-browser

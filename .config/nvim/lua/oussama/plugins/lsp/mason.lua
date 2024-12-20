@@ -46,6 +46,7 @@ return {
 				"eslint_d", -- eslint formatter
 				"ruff", -- python formatter
 				"clang-format", -- c/c++ formatter
+				"goimports", -- go formatter
 			},
 		})
 	end,

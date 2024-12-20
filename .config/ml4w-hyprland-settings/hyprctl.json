@@ -1,0 +1,26 @@
+[
+    {
+        "key": "general:gaps_in",
+        "value": 5
+    },
+    {
+        "key": "general:gaps_out",
+        "value": 7
+    },
+    {
+        "key": "general:border_size",
+        "value": 3
+    },
+    {
+        "key": "general:no_border_on_floating",
+        "value": true
+    },
+    {
+        "key": "general:gaps_workspaces",
+        "value": 0
+    },
+    {
+        "key": "general:resize_on_border",
+        "value": false
+    }
+]

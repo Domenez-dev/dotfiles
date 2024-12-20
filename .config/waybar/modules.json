@@ -68,27 +68,29 @@
 
   // Mount common drive
   "custom/common-drive": {
-        "format": "",          
-        "on-click": "sudo mount -t ntfs-3g /dev/nvme0n1p4 /mnt/Common",
-        "tooltip-format": "Mount Common Drive"
-    },
-
-  "custom/player": {
-    "format": "{title} - {artist}",
-    "exec": "playerctl metadata --format '{{title}} - {{artist}}'",
-    "interval": 1,
-    "tooltip": false
+    "format": "",
+    "on-click": "sudo mount -t ntfs-3g /dev/nvme0n1p4 /mnt/Common",
+    "tooltip-format": "Mount Common Drive"
   },
 
- 
- // Spotify icon
+  "custom/player": {
+    "format": "{}",
+    "escape": true,
+    "exec": "playerctl metadata --format '{{title}} - {{artist}}'",
+    "interval": 5,
+    "tooltip": false,
+    "on-click": "playerctl play-pause",
+    "max-length": 50
+  },
+
+  // Spotify icon
   "custom/spotify": {
-        "format": "",          
-        "on-click": "spotify-launcher",
-        "tooltip-format": "Open spotify"
-    },
- 
-    // Tools
+    "format": "",
+    "on-click": "spotify-launcher",
+    "tooltip-format": "Open spotify"
+  },
+
+  // Tools
   "custom/tools": {
     "format": "",
     "tooltip-format": "Tools"
@@ -184,9 +186,9 @@
 
   // Power Menu
   "custom/exit": {
-    "format": "",
+    "format": "襤",
     "on-click": "/home/Zakkye/dotfiles/.config/rofi/scripts/powermenu_t3",
-    "tooltip-format": "Power Menu"
+    "tooltip": false
   },
 
   // Hyprshade
@@ -294,8 +296,8 @@
   "group/links": {
     "orientation": "horizontal",
     "modules": [
-//      "custom/chatgpt",
-      "custom/empty"      
+      //      "custom/chatgpt",
+      "custom/empty"
     ]
   },
 
@@ -307,11 +309,7 @@
       "children-class": "not-memory",
       "transition-left-to-right": true
     },
-    "modules": [
-      "custom/settings",
-      "custom/waybarthemes",
-      "custom/wallpaper"
-    ]
+    "modules": ["custom/settings", "custom/waybarthemes", "custom/wallpaper"]
   },
 
   // Network
