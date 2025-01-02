@@ -34,13 +34,15 @@ video_player = [
     { run = 'vlc "$@"', orphan = true , for = 'unix'}
 ]
 pdf_reader = [
-    { run = 'okular "$@"', orphan = true, for = 'unix'}
+    { run = 'okular "$@"', orphan = true, desc = "okular", for = 'unix'},
+    { run = 'zen-browser "$@"', desc = "browser", orphan = true, for = 'unix'},
 ]
 extract = [
 	  { run = 'unzip "$@"', desc = "Extract here", for = "unix" },
+	  { run = 'zipat "$@"', desc = "Extract in folder", for = "unix" },
 ]
 md_viewer = [
-    { run = 'zen "$@"', orphan = true, desc = "preview in zed", for ="unix"}
+    { run = 'zen-browser "$@"', orphan = true, desc = "preview in zed", for ="unix"}
 ]
 
 [plugins]

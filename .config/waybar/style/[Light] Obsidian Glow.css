@@ -32,12 +32,12 @@ window#waybar.empty #window {
 }
 
 tooltip {
-  background: white;
+  background: rgba(0, 21, 45, 0.8);
   border-radius: 10px;
 }
 
 tooltip label {
-  color: #373737;
+  color: #fff;
   padding-right: 2px;
   padding-left: 2px;
 }

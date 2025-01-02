@@ -5,6 +5,8 @@ alias zen='zen-browser'
 alias nhelp='glow ~/Documents/nvim.md'
 alias rofilauncher='/home/Zakkye/dotfiles/.config/rofi/launchers/type-6/launcher.sh'
 alias powermenu='/home/Zakkye/dotfiles/.config/rofi/powermenu/type-3/powermenu.sh'
+alias zipat='~/Documents/scripts/zipat.sh'
+alias bolt='~/Documents/scripts/bolt.sh'
 
 # -----------------------------------------------------
 # General

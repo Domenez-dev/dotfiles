@@ -1,2 +1,2 @@
-require("oussama.core")
-require("oussama.lazy")
+require("zaki.core")
+require("zaki.lazy")
