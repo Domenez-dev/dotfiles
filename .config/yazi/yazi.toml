@@ -5,13 +5,13 @@ linemode = "size"
 [open]
 rules = [
     { mime = "image/*", use = "view_image" },
-    { mime = "text/*", use = "edit" },
     { mime = "inode/directory", use = "change_dir" },
     { mime = "video/*", use = "video_player"},
     { name = "*.md", use = "md_viewer"},
     { name = "*.pdf", use = "pdf_reader"},
     { name = "*.zip", use = "extract"},
     { name = "*.sh", use = "excute" },
+    { mime = "text/*", use = "edit" },
     { name = "*", use = "edit" }  # Fallback rule
 ]
 
@@ -28,6 +28,7 @@ view_image = [
 change_dir = [
     { run = 'cd "$@" && exec bash', block = true, for = "unix" },
     { run = 'nautilus "$@"', orphan = true, for = "unix" },
+    { run = 'nvim "$@"', block = true, desc = "edit with nvim", for = "unix"},
     { run = 'obsidian "$@"', desc = "open vault with obsidian", orphan = true, for = "unix"}
 ]
 video_player = [
@@ -42,7 +43,8 @@ extract = [
 	  { run = 'zipat "$@"', desc = "Extract in folder", for = "unix" },
 ]
 md_viewer = [
-    { run = 'zen-browser "$@"', orphan = true, desc = "preview in zed", for ="unix"}
+    { run = 'zen-browser "$@"', orphan = true, desc = "preview in zed", for ="unix"},
+    { run = 'nvim "$@"', block = true, desc = "edit in nvim", for ="unix"}
 ]
 
 [plugins]
@@ -55,8 +57,3 @@ append_preview = [
   	{ mime = "application/x-rar",           run = "unzip" },
   	{ mime = "application/x-xz",            run = "unzip" },
 ]
-
-prepend_previewers = [
-    { name = "*.md", run = "glow" },
-]
-

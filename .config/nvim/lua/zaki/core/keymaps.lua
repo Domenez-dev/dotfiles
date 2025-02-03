@@ -4,10 +4,12 @@ local keymap = vim.keymap
 
 -- use jk to exit insert mode
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("i", ";;", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", ";", ":", { desc = "use ; as :" })
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit file" })
 keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force quit file" })
+
 -- Move across wrapped lines
 keymap.set("n", "j", "v:count > 0 ? 'j' : 'gj'", { noremap = true, expr = true, silent = true })
 keymap.set("n", "k", "v:count > 0 ? 'k' : 'gk'", { noremap = true, expr = true, silent = true })
@@ -24,6 +26,7 @@ keymap.set("n", "c", '"_c', { noremap = true, silent = true })
 keymap.set("v", "x", '"_x', { noremap = true, silent = true })
 keymap.set("v", "c", '"_c', { noremap = true, silent = true })
 keymap.set("n", "xx", '"_dd', { noremap = true, silent = true })
+keymap.set("n", "<leader>/", ":noh<CR>", { noremap = true, silent = true })
 
 -- keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 -- keymap.set("v", "K", ":m '<-2<CR>gv=gv")
