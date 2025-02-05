@@ -17,7 +17,8 @@ rules = [
 
 [opener]
 excute = [
-    { run = './"$@"'},
+    { run = 'nvim "$@"', desc="edit", block = true, for = "unix" },
+    { run = './"$@"', desc="excute"},
 ]
 edit = [
     { run = 'nvim "$@"', block = true, for = "unix" },

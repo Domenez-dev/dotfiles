@@ -4,11 +4,14 @@ local keymap = vim.keymap
 
 -- use jk to exit insert mode
 keymap.set("i", "jj", "<ESC>", { desc = "Exit insert mode with jk" })
-keymap.set("i", ";;", "<ESC>", { desc = "Exit insert mode with jk" })
+keymap.set("i", "vv", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", ";", ":", { desc = "use ; as :" })
 keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 keymap.set("n", "<leader>q", ":q<CR>", { desc = "Quit file" })
 keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force quit file" })
+
+-- use arrows to navigate through windows
+-- keymap.set("n", "<s-")
 
 -- Move across wrapped lines
 keymap.set("n", "j", "v:count > 0 ? 'j' : 'gj'", { noremap = true, expr = true, silent = true })
