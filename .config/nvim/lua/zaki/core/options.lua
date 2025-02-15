@@ -42,7 +42,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 -- turn off swapfile
 opt.swapfile = false
 
-opt.scrolloff = 8 -- scroll when cursor is 8 lines away from screen edge
+opt.scrolloff = 4 -- scroll when cursor is 8 lines away from screen edge
 
 vim.o.hlsearch = true -- highlight search results
 vim.o.undofile = true -- enable undo file
