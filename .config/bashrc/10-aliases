@@ -25,6 +25,7 @@ alias vim='$EDITOR'
 alias ts='~/.config/ml4w/scripts/snapshot.sh'
 alias wifi='nmtui'
 alias cleanup='~/.config/ml4w/scripts/cleanup.sh'
+alias dismaj='sudo vim /opt/discord/resources/build_info.json'
 
 # -----------------------------------------------------
 # ML4W Apps
@@ -78,3 +79,20 @@ alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 # mount Common drive
 alias common='sudo mount -t ntfs-3g /dev/nvme0n1p4 /mnt/Common'
 alias uncommon='sudo umount /mnt/Common'
+
+
+# playerctl
+alias play='playerctl play'
+alias ps='playerctl play-pause'
+alias pn='playerctl next'
+alias pp='playerctl previous'
+
+# Django
+alias pr='python manage.py runserver'
+alias pmg='python manage.py makemigrations'
+alias pm='python manage.py migrate'
+alias startapp='python manage.py startapp'
+alias psm='python manage.py showmigrations'
+alias shell='python manage.py shell'
+alias wikaya='source ../.venv/bin/activate'
+

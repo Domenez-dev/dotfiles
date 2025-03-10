@@ -1,3 +1,4 @@
+-- Zaki keymaps
 vim.g.mapleader = " "
 
 local keymap = vim.keymap
@@ -16,7 +17,8 @@ keymap.set("n", "<leader>Q", ":q!<CR>", { desc = "Force quit file" })
 -- Move across wrapped lines
 keymap.set("n", "j", "v:count > 0 ? 'j' : 'gj'", { noremap = true, expr = true, silent = true })
 keymap.set("n", "k", "v:count > 0 ? 'k' : 'gk'", { noremap = true, expr = true, silent = true })
-keymap.set("n", "<A-a>", "gg^vGg_", { desc = "Select all text" })
+keymap.set("n", "<A-a>", "ggVG", { desc = "Select all text" })
+keymap.set("n", "<C-e>", "<C-u>", { desc = "move up half page" })
 
 keymap.set({ "n", "o", "x" }, "<s-h>", "^", { desc = "Jump to beginning of line" })
 keymap.set({ "n", "o", "x" }, "<s-l>", "g_", { desc = "Jump to end of line" })
