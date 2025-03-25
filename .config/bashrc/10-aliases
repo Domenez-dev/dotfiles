@@ -8,6 +8,8 @@ alias powermenu='/home/Zakkye/dotfiles/.config/rofi/powermenu/type-3/powermenu.s
 alias zipat='~/Documents/scripts/zipat.sh'
 alias bolt='~/Documents/scripts/bolt.sh'
 alias ta='tmux attach'
+alias tm='tmux'
+alias trash='rm -fr /home/Zakkye/.local/share/Trash/'
 
 # -----------------------------------------------------
 # General
