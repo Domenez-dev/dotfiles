@@ -10,7 +10,7 @@ desc = "Cd to config file"
 
 [[manager.prepend_keymap]]
 on   = [ "g", "z" ]
-run  = "cd /mnt/Common/"
+run  = "cd /run/media/Zakkye/Common Volume/"
 desc = "access Common disk"
 
 [[manager.prepend_keymap]]
