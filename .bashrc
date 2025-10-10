@@ -16,5 +16,9 @@ for f in ~/.config/bashrc/*; do
   fi
 done
 
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+complete -cf sudo
 
 export PATH="$PATH:/home/Zakkye/.foundry/bin"

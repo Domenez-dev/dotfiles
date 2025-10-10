@@ -10,6 +10,8 @@ alias bolt='~/Documents/scripts/bolt.sh'
 alias ta='tmux attach'
 alias tm='tmux'
 alias trash='rm -fr /home/Zakkye/.local/share/Trash/'
+alias sched="WINEPREFIX=~/Games/wine-pfx/ wine 'Games/wine-pfx/drive_c/Program Files \(x86\)/DODI-Repacks/Schedule I/Schedule I.exe'"
+alias reddit='csvlens /home/Zakkye/Documents/other/accounts.csv'
 
 # -----------------------------------------------------
 # General
