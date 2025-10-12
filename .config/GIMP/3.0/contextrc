@@ -1,14 +1,16 @@
 # GIMP user context
 
-(tool "gimp-move-tool")
+(tool "gimp-operation-tool")
 (paint-info "gimp-paintbrush")
-(brush "2. Hardness 050")
+(background
+    (color "R'G'B'A float" 16 "\0\0\0\0\0\0\0\0\0\0\0\0\0\0\200\77" 0))
+(brush "2. Hardness 100")
 (dynamics "Pressure Size")
 (mybrush "100% Opaque")
 (pattern "Starfield")
 (gradient "Skyline")
 (palette "Standard")
-(font "Sans-serif")
+(font "Monospace")
 (tool-preset "Core Pointer")
 
 # end of user context

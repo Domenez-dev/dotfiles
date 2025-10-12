@@ -1,6 +1,8 @@
 # GIMP gimp-text-tool options
 
 (palette "Standard")
-(font "Sans-serif")
+(font "Monospace")
+(font-size 40)
+(justify center)
 
 # end of gimp-text-tool options

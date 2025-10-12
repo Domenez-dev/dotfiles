@@ -8,14 +8,14 @@
 
 (language "")
 (prev-language "American English")
-(config-version "3.0.4")
+(config-version "3.0.6")
 (undo-levels 8)
 (undo-preview-size medium)
 (layer-preview-size extra-large)
 (thumbnail-size large)
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-raw-placeholder/file-raw-placeholder")
-(monitor-xresolution 135)
-(monitor-yresolution 129)
+(monitor-xresolution 168)
+(monitor-yresolution 161)
 (default-view
     (show-menubar yes)
     (show-statusbar yes)
