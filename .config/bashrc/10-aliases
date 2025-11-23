@@ -99,5 +99,5 @@ alias pm='python manage.py migrate'
 alias startapp='python manage.py startapp'
 alias psm='python manage.py showmigrations'
 alias shell='python manage.py shell'
-alias wikaya='source ../.venv/bin/activate'
+alias venv='source .venv/bin/activate'
 
