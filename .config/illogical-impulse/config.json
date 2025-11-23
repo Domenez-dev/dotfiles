@@ -21,13 +21,13 @@
         "extraBackgroundTint": true,
         "fakeScreenRounding": 2,
         "palette": {
-            "type": "auto"
+            "type": "scheme-rainbow"
         },
         "transparency": {
             "automatic": true,
             "backgroundTransparency": 0.11,
             "contentTransparency": 0.57,
-            "enable": false
+            "enable": true
         },
         "wallpaperTheming": {
             "enableAppsAndShell": true,
@@ -74,7 +74,7 @@
         },
         "quote": "",
         "thumbnailPath": "",
-        "wallpaperPath": "/home/Zakkye/Pictures/walls/wallhaven-vgy3m3.png"
+        "wallpaperPath": "/home/Zakkye/wallpaper/2.jpg"
     },
     "bar": {
         "autoHide": {
@@ -86,9 +86,9 @@
                 "enable": true
             }
         },
-        "borderless": true,
+        "borderless": false,
         "bottom": false,
-        "cornerStyle": 0,
+        "cornerStyle": 1,
         "resources": {
             "alwaysShowCpu": true,
             "alwaysShowSwap": true,
@@ -151,7 +151,7 @@
         "code": "0;P;d;1;0l;10;0o;2;1b;0"
     },
     "dock": {
-        "enable": true,
+        "enable": false,
         "height": 60,
         "hoverRegionHeight": 2,
         "hoverToReveal": true,
@@ -198,7 +198,7 @@
     },
     "lock": {
         "blur": {
-            "enable": false,
+            "enable": true,
             "extraZoom": 1.1,
             "radius": 100
         },
