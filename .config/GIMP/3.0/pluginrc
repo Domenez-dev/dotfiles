@@ -180,7 +180,7 @@
         (proc-arg 12 "GimpParamPattern" "GimpPattern" "pattern" "Pattern" "Pattern" 3 0 0 1965)
         (proc-arg 12 "GimpParamGradient" "GimpGradient" "gradient" "Gradient" "Gradient" 3 0 0 2060)
         (proc-arg 5 "GParamBoolean" "gboolean" "toggle-2" "Gradient reverse" "Gradient reverse" 3 0)
-        (proc-arg 12 "GimpParamFont" "GimpFont" "font" "Font" "Font" 3 0 0 3279)
+        (proc-arg 12 "GimpParamFont" "GimpFont" "font" "Font" "Font" 3 0 0 0)
         (proc-arg 1 "GParamInt" "gint" "adjustment-3" "Font size (pixels)" "Font size (pixels)" 3 1 1000 50)
         (proc-arg 12 "GimpParamPalette" "GimpPalette" "palette" "Palette" "Palette" 3 0 0 2014)
         (proc-arg 13 "GimpParamFile" "GFile" "filename" "Environment map" "Environment map" 259 0 1 "file:///usr/share/gimp/3.0/scripts/images/beavis.jpg")
@@ -3717,6 +3717,45 @@
         (proc-arg 1 "GParamInt" "gint" "width" "Width" "Width of one frame" 3 0 524288 0)
         (proc-arg 1 "GParamInt" "gint" "height" "Height" "Height of one frame" 3 0 524288 0)
         (proc-arg 1 "GParamInt" "gint" "frames" "Frames" "Number of frames" 3 0 2147483647 0)))
+(plug-in-def "${gimp_plug_in_dir}/plug-ins/file-fits/file-fits" 1759968406
+    (proc-def "file-fits-load" 1
+         "Load file of the FITS file format"
+         "Load file of the FITS file format (Flexible Image Transport System)"
+         "Peter Kirchgessner"
+         "Peter Kirchgessner (peter@kirchgessner.net), Alex Sa."
+         "1997 - 2023"
+         "Flexible Image Transport System"
+         0
+        (icon icon-name -1 "")
+        (load-proc
+            (extensions "fit,fits")
+            (magics "0,string,SIMPLE")
+            (mime-types "image/x-fits"))
+         ""
+         2147483647
+         2 1
+        (proc-arg 3 "GParamEnum" "GimpRunMode" "run-mode" "Run mode" "The run mode" 3 1)
+        (proc-arg 13 "GimpParamFile" "GFile" "file" "File" "The file to load" 3 0 0 "")
+        (proc-arg 9 "GimpParamImage" "GimpImage" "image" "Image" "Output image" 3 1))
+    (proc-def "file-fits-export" 1
+         "Export file in the FITS file format"
+         "FITS exporting handles all image types except those with alpha channels."
+         "Peter Kirchgessner"
+         "Peter Kirchgessner (peter@kirchgessner.net), Alex Sa."
+         "1997 - 2023"
+         "Flexible Image Transport System"
+         0
+        (icon icon-name -1 "")
+        (save-proc
+            (extensions "fit,fits")
+            (mime-types "image/x-fits"))
+         "RGB, GRAY, INDEXED"
+         2147483647
+         4 0
+        (proc-arg 3 "GParamEnum" "GimpRunMode" "run-mode" "Run mode" "The run mode" 3 1)
+        (proc-arg 9 "GimpParamImage" "GimpImage" "image" "Image" "The image to export" 3 0)
+        (proc-arg 13 "GimpParamFile" "GFile" "file" "File" "The file to export to" 3 1 0 "")
+        (proc-arg 11 "GimpParamExportOptions" "GimpExportOptions" "options" "Options" "Export options" 3)))
 (plug-in-def "${gimp_plug_in_dir}/plug-ins/file-faxg3/file-faxg3" 1759968406
     (proc-def "file-faxg3-load" 1
          "Loads g3 fax files"
