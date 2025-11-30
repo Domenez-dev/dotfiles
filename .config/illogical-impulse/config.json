@@ -21,7 +21,7 @@
         "extraBackgroundTint": true,
         "fakeScreenRounding": 2,
         "palette": {
-            "type": "scheme-rainbow"
+            "type": "scheme-tonal-spot"
         },
         "transparency": {
             "automatic": true,
@@ -74,7 +74,7 @@
         },
         "quote": "",
         "thumbnailPath": "",
-        "wallpaperPath": "/home/Zakkye/wallpaper/2.jpg"
+        "wallpaperPath": "/home/Zakkye/Pictures/Wallpapers/5.jpg"
     },
     "bar": {
         "autoHide": {
@@ -109,10 +109,10 @@
         },
         "utilButtons": {
             "showColorPicker": true,
-            "showDarkModeToggle": true,
+            "showDarkModeToggle": false,
             "showKeyboardToggle": true,
             "showMicToggle": false,
-            "showPerformanceProfileToggle": false,
+            "showPerformanceProfileToggle": true,
             "showScreenSnip": false
         },
         "verbose": true,
