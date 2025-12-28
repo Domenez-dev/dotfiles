@@ -22,3 +22,4 @@ done
 complete -cf sudo
 
 export PATH="$PATH:/home/Zakkye/.foundry/bin"
+export WINEPREFIX="/home/Zakkye/Games/jc141/wine-prefix/" 
