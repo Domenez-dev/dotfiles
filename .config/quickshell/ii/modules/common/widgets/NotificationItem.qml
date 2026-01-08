@@ -138,7 +138,15 @@ Item { // Notification item area
 
         ColumnLayout { // Content column
             id: contentColumn
-            anchors.fill: parent
+            // --- DELETE THIS ---
+            // anchors.fill: parent 
+            
+            // --- ADD THIS ---
+            // anchors.top: parent.top
+            // anchors.left: parent.left
+            // anchors.right: parent.right
+            // ----------------
+
             anchors.margins: expanded ? root.padding : 0
             spacing: 3
 
