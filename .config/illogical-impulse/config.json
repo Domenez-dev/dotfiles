@@ -154,7 +154,7 @@
         },
         "topLeftIcon": "spark",
         "utilButtons": {
-            "showColorPicker": false,
+            "showColorPicker": true,
             "showDarkModeToggle": false,
             "showKeyboardToggle": false,
             "showMicToggle": false,
@@ -165,9 +165,9 @@
         "verbose": true,
         "vertical": false,
         "weather": {
-            "city": "algiers",
-            "enable": false,
-            "enableGPS": true,
+            "city": "Bab ezzouar",
+            "enable": true,
+            "enableGPS": false,
             "fetchInterval": 10,
             "useUSCS": false
         },
@@ -377,7 +377,7 @@
         "savePath": ""
     },
     "search": {
-        "engineBaseUrl": "https://www.google.com/search?q=",
+        "engineBaseUrl": "https://duckduckgo.com/?t=ffab&q=",
         "excludedSites": [
             "quora.com"
         ],
@@ -442,11 +442,11 @@
                     },
                     {
                         "size": 1,
-                        "type": "musicRecognition"
+                        "type": "audio"
                     },
                     {
                         "size": 1,
-                        "type": "audio"
+                        "type": "onScreenKeyboard"
                     },
                     {
                         "size": 2,
@@ -454,7 +454,7 @@
                     },
                     {
                         "size": 1,
-                        "type": "onScreenKeyboard"
+                        "type": "gameMode"
                     },
                     {
                         "size": 1,
@@ -462,7 +462,7 @@
                     },
                     {
                         "size": 1,
-                        "type": "colorPicker"
+                        "type": "nightLight"
                     }
                 ]
             },

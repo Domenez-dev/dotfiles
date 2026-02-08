@@ -179,6 +179,9 @@ Scope {
         function clipboardToggle() {
             overviewScope.toggleClipboard();
         }
+        function emojiToggle() {
+            overviewScope.toggleEmojis();
+        }
     }
 
     GlobalShortcut {
