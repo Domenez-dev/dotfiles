@@ -14,8 +14,8 @@
 (layer-preview-size extra-large)
 (thumbnail-size large)
 (import-raw-plug-in "${gimp_plug_in_dir}/plug-ins/file-raw-placeholder/file-raw-placeholder")
-(monitor-xresolution 168)
-(monitor-yresolution 161)
+(monitor-xresolution 135)
+(monitor-yresolution 129)
 (default-view
     (show-menubar yes)
     (show-statusbar yes)

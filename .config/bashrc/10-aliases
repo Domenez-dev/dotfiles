@@ -89,7 +89,7 @@ alias uncommon='sudo umount /mnt/Common'
 
 # playerctl
 alias play='playerctl play'
-alias ps='playerctl play-pause'
+alias pl='playerctl play-pause'
 alias pn='playerctl next'
 alias pp='playerctl previous'
 

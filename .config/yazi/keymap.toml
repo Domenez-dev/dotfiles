@@ -14,6 +14,11 @@ run  = "cd /run/media/Zakkye/Common Volume/"
 desc = "access Common disk"
 
 [[mgr.prepend_keymap]]
+on   = [ "g", "p" ]
+run  = "cd /home/Zakkye/Documents/rsd-m2/pfe"
+desc = "go to pfe folder"
+
+[[mgr.prepend_keymap]]
 on   = [ "g", "k" ]
 run  = "cd ~/Documents/rsd/"
 desc = "access kraya" 
