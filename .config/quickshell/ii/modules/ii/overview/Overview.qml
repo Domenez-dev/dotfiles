@@ -179,6 +179,13 @@ Scope {
         function toggleReleaseInterrupt() {
             GlobalStates.superReleaseMightTrigger = false;
         }
+        function toggleRelease() {
+            if (!GlobalStates.superReleaseMightTrigger) {
+                GlobalStates.superReleaseMightTrigger = true;
+                return;
+            }
+            GlobalStates.overviewOpen = !GlobalStates.overviewOpen;
+        }
         function clipboardToggle() {
             overviewScope.toggleClipboard();
         }
