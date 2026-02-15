@@ -13,6 +13,7 @@ alias trash='rm -fr /home/Zakkye/.local/share/Trash/'
 alias sched="WINEPREFIX=~/Games/wine-pfx/ wine 'Games/wine-pfx/drive_c/Program Files \(x86\)/DODI-Repacks/Schedule I/Schedule I.exe'"
 alias reddit='csvlens /home/Zakkye/Documents/other/accounts.csv'
 alias naut='nautilus . &'
+alias minecraft='java -jar /home/Zakkye/Documents/apps/TLauncher.v17/TLauncher.jar'
 
 # -----------------------------------------------------
 # General
