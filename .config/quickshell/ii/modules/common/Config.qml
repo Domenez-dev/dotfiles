@@ -186,7 +186,17 @@ Singleton {
                             property bool useSineCookie: false
                         }
                         property JsonObject digital: JsonObject {
+                            property bool adaptiveAlignment: true
+                            property bool showDate: true
                             property bool animateChange: true
+                            property bool vertical: false
+                            property JsonObject font: JsonObject {
+                                property string family: "Google Sans Flex"
+                                property real weight: 350
+                                property real width: 100
+                                property real size: 90
+                                property real roundness: 0
+                            }
                         }
                         property JsonObject quote: JsonObject {
                             property bool enable: false
@@ -563,6 +573,7 @@ Singleton {
             }
 
             property JsonObject updates: JsonObject {
+                property bool enableCheck: true
                 property int checkInterval: 120 // minutes
                 property int adviseUpdateThreshold: 75 // packages
                 property int stronglyAdviseUpdateThreshold: 200 // packages

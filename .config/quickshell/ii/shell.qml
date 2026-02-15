@@ -3,11 +3,10 @@
 //@ pragma Env QT_QUICK_CONTROLS_STYLE=Basic
 //@ pragma Env QT_QUICK_FLICKABLE_WHEEL_DECELERATION=10000
 
-// Adjust this to make the shell smaller or larger
-//@ pragma Env QT_SCALE_FACTOR=1
+// Remove two slashes below and adjust the value to change the UI scale
+////@ pragma Env QT_SCALE_FACTOR=1
 
 import "modules/common"
-import "modules/youtubeSearch"
 import "services"
 import "panelFamilies"
 
@@ -74,15 +73,5 @@ ShellRoot {
 
         onPressed: root.cyclePanelFamily()
     }
-
-    // The Search Bar Instance
-    YoutubeSearchBar {}
-
-    IpcHandler {
-    target: "yt"
-    function search(): void {
-        ytSearchBar.visible = true
-            }
-        }
 }
 

@@ -9,8 +9,10 @@
 /home/Zakkye/.config/fuzzel/fuzzel.ini
 /home/Zakkye/.config/fuzzel/fuzzel_theme.ini
 /home/Zakkye/.config/hypr/hypridle.conf
+/home/Zakkye/.config/hypr/hypridle.conf.new
 /home/Zakkye/.config/hypr/hyprland/colors.conf
 /home/Zakkye/.config/hypr/hyprland.conf
+/home/Zakkye/.config/hypr/hyprland.conf.new
 /home/Zakkye/.config/hypr/hyprland/env.conf
 /home/Zakkye/.config/hypr/hyprland/execs.conf
 /home/Zakkye/.config/hypr/hyprland/general.conf
@@ -26,8 +28,11 @@
 /home/Zakkye/.config/hypr/hyprland/scripts/workspace_action.sh
 /home/Zakkye/.config/hypr/hyprland/scripts/zoom.sh
 /home/Zakkye/.config/hypr/hyprlock.conf
+/home/Zakkye/.config/hypr/hyprlock.conf.new
 /home/Zakkye/.config/hypr/monitors.conf
+/home/Zakkye/.config/hypr/monitors.conf.new
 /home/Zakkye/.config/hypr/workspaces.conf
+/home/Zakkye/.config/hypr/workspaces.conf.new
 /home/Zakkye/.config/illogical-impulse/installed_true
 /home/Zakkye/.config/kdeglobals
 /home/Zakkye/.config/kde-material-you-colors/config.conf
@@ -373,6 +378,7 @@
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ClippedProgressBar.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ConfigRow.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ConfigSelectionArray.qml
+/home/Zakkye/.config/quickshell/ii/modules/common/widgets/ConfigSlider.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ConfigSpinBox.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ConfigSwitch.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/ContentPage.qml
@@ -431,6 +437,7 @@
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/SelectionDialog.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/SelectionGroupButton.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/shapes/example.qml
+/home/Zakkye/.config/quickshell/ii/modules/common/widgets/shapes/example-squircle.qml
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/shapes/geometry/offset.js
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/shapes/.git
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/shapes/.gitignore
@@ -493,6 +500,7 @@
 /home/Zakkye/.config/quickshell/ii/modules/common/widgets/WindowDialogTitle.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/Background.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/AbstractBackgroundWidget.qml
+/home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/ClockText.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/ClockWidget.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/CookieClock.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/CookieQuote.qml
@@ -500,6 +508,7 @@
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/dateIndicator/DateIndicator.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/dateIndicator/RectangleDate.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/dateIndicator/RotatingDate.qml
+/home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/DigitalClock.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/HourHand.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/HourMarks.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/background/widgets/clock/MinuteHand.qml
@@ -589,6 +598,7 @@
 /home/Zakkye/.config/quickshell/ii/modules/ii/polkit/PolkitContent.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/polkit/Polkit.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/regionSelector/CircleSelectionDetails.qml
+/home/Zakkye/.config/quickshell/ii/modules/ii/regionSelector/CursorGuide.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/regionSelector/OptionsToolbar.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/regionSelector/RectCornersSelectionDetails.qml
 /home/Zakkye/.config/quickshell/ii/modules/ii/regionSelector/RegionFunctions.qml
@@ -893,6 +903,7 @@
 /home/Zakkye/.config/quickshell/ii/services/EasyEffects.qml
 /home/Zakkye/.config/quickshell/ii/services/Emojis.qml
 /home/Zakkye/.config/quickshell/ii/services/FirstRunExperience.qml
+/home/Zakkye/.config/quickshell/ii/services/GlobalFocusGrab.qml
 /home/Zakkye/.config/quickshell/ii/services/HyprlandData.qml
 /home/Zakkye/.config/quickshell/ii/services/HyprlandKeybinds.qml
 /home/Zakkye/.config/quickshell/ii/services/HyprlandXkb.qml
@@ -924,10 +935,13 @@
 /home/Zakkye/.config/quickshell/ii/services/Ydotool.qml
 /home/Zakkye/.config/quickshell/ii/settings.qml
 /home/Zakkye/.config/quickshell/ii/shell.qml
+/home/Zakkye/.config/quickshell/ii/translations/de_DE.json
 /home/Zakkye/.config/quickshell/ii/translations/en_US.json
 /home/Zakkye/.config/quickshell/ii/translations/he_HE.json
+/home/Zakkye/.config/quickshell/ii/translations/id_ID.json
 /home/Zakkye/.config/quickshell/ii/translations/it_IT.json
 /home/Zakkye/.config/quickshell/ii/translations/ja_JP.json
+/home/Zakkye/.config/quickshell/ii/translations/pt_BR.json
 /home/Zakkye/.config/quickshell/ii/translations/ru_RU.json
 /home/Zakkye/.config/quickshell/ii/translations/tools/guide/translation-tools-guide.md
 /home/Zakkye/.config/quickshell/ii/translations/tools/guide/translation-tools-guide-zh_CN.md
