@@ -5,9 +5,20 @@
 # -----------------------------------------------------
 # Starship Prompt
 # -----------------------------------------------------
-eval "$(starship init bash)"
-eval "$(fzf --bash)"
-eval "$(zoxide init bash)"
+if [ ! -f ~/.cache/starship_init.bash ]; then
+    starship init bash > ~/.cache/starship_init.bash
+fi
+source ~/.cache/starship_init.bash
+
+if [ ! -f ~/.cache/fzf_init.bash ]; then
+    fzf --bash > ~/.cache/fzf_init.bash
+fi
+source ~/.cache/fzf_init.bash
+
+if [ ! -f ~/.cache/zoxide_init.bash ]; then
+    zoxide init bash > ~/.cache/zoxide_init.bash
+fi
+source ~/.cache/zoxide_init.bash
 
 # -----------------------------------------------------
 # Pywal

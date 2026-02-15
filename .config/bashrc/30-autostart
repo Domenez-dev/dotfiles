@@ -6,7 +6,11 @@
 # Fastfetch
 # -----------------------------------------------------
 if [[ $(tty) == *"pts"* ]]; then
-    fastfetch --config examples/13
+    # Only run fastfetch once per session to save time
+    if [ ! -f /dev/shm/fastfetch_run_$USER ]; then
+        fastfetch --config examples/13
+        touch /dev/shm/fastfetch_run_$USER
+    fi
 else
     echo
     if [ -f /bin/qtile ]; then
