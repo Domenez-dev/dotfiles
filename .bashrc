@@ -10,9 +10,10 @@
 alias niv="npm install vite --save-dev"
 
 for f in ~/.config/bashrc/*; do
-  if [ ! -d $f ]; then
-    c=$(echo $f | sed -e "s=.config/bashrc=.config/bashrc/custom=")
-    [[ -f $c ]] && source $c || source $f
+  if [ ! -d "$f" ]; then
+    # Use bash parameter expansion for string replacement (faster than sed/subshell)
+    c="${f/.config\/bashrc/.config\/bashrc\/custom}"
+    [[ -f "$c" ]] && source "$c" || source "$f"
   fi
 done
 
