@@ -1,10 +1,4 @@
-# -----------------------------------------------------
-# INIT
-# -----------------------------------------------------
-
-# -----------------------------------------------------
-# Exports
-# -----------------------------------------------------
-export EDITOR=nvim
-export PATH="/usr/lib/ccache/bin/:$PATH"
-export ZSH="$HOME/.oh-my-zsh"
+# DEPRECATED
+# This configuration has been deprecated in favor of bash.
+echo "ZSH is deprecated. Please use bash."
+exec bash
