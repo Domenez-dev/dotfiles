@@ -119,8 +119,8 @@
                 "showOnlyWhenLocked": false,
                 "style": "cookie",
                 "styleLocked": "cookie",
-                "x": 38.40625,
-                "y": 74.3515625
+                "x": 32.9375,
+                "y": 74.65234375
             },
             "weather": {
                 "enable": false,
