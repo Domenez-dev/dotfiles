@@ -5,6 +5,9 @@
 # -----------------------------------------------------
 # Fastfetch
 # -----------------------------------------------------
+fastfetch --config examples/13
+
+
 if [[ $(tty) == *"pts"* ]]; then
     # Only run fastfetch once per session to save time
     if [ ! -f /dev/shm/fastfetch_run_$USER ]; then

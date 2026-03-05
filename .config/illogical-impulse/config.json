@@ -250,9 +250,9 @@
         "monochromeIcons": true,
         "pinnedApps": [
             "kitty",
-            "steam",
-            "org.gnome.nautilus",
-            "antigravity"
+            "antigravity",
+            "obsidian",
+            "zen-beta"
         ],
         "pinnedOnStartup": false
     },
@@ -298,7 +298,7 @@
     },
     "lock": {
         "blur": {
-            "enable": true,
+            "enable": false,
             "extraZoom": 1.1,
             "radius": 100
         },
@@ -334,7 +334,7 @@
     },
     "overlay": {
         "clickthroughOpacity": 0.8,
-        "darkenScreen": true,
+        "darkenScreen": false,
         "floatingImage": {
             "imageSource": "https://media.tenor.com/H5U5bJzj3oAAAAAi/kukuru.gif",
             "scale": 0.5

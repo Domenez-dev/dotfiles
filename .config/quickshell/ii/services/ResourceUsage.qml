@@ -60,7 +60,7 @@ Singleton {
     }
 
 	Timer {
-		interval: 1
+		interval: 3000 // Sane default
         running: true 
         repeat: true
 		onTriggered: {

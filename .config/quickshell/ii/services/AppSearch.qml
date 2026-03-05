@@ -95,70 +95,81 @@ Singleton {
         return str.toLowerCase().replace(/_/g, "-");
     }
 
+    property var iconCache: ({})
+
     function guessIcon(str) {
         if (!str || str.length == 0) return "image-missing";
+        
+        if (iconCache[str]) return iconCache[str];
 
-        // Quickshell's desktop entry lookup
+        let result = "application-x-executable";
         const entry = DesktopEntries.byId(str);
-        if (entry) return entry.icon;
+        if (entry) {
+            result = entry.icon;
+        } else if (substitutions[str]) {
+            result = substitutions[str];
+        } else if (substitutions[str.toLowerCase()]) {
+            result = substitutions[str.toLowerCase()];
+        } else {
+            // Regex substitutions
+            let regexMatch = false;
+            for (let i = 0; i < regexSubstitutions.length; i++) {
+                const substitution = regexSubstitutions[i];
+                const replacedName = str.replace(substitution.regex, substitution.replace);
+                if (replacedName != str) {
+                    result = replacedName;
+                    regexMatch = true;
+                    break;
+                }
+            }
 
-        // Normal substitutions
-        if (substitutions[str]) return substitutions[str];
-        if (substitutions[str.toLowerCase()]) return substitutions[str.toLowerCase()];
-
-        // Regex substitutions
-        for (let i = 0; i < regexSubstitutions.length; i++) {
-            const substitution = regexSubstitutions[i];
-            const replacedName = str.replace(
-                substitution.regex,
-                substitution.replace,
-            );
-            if (replacedName != str) return replacedName;
+            if (!regexMatch) {
+                if (iconExists(str)) {
+                    result = str;
+                } else {
+                    const lowercased = str.toLowerCase();
+                    if (iconExists(lowercased)) {
+                        result = lowercased;
+                    } else {
+                        const reverseDomainNameAppName = getReverseDomainNameAppName(str);
+                        if (iconExists(reverseDomainNameAppName)) {
+                            result = reverseDomainNameAppName;
+                        } else {
+                            const lowercasedDomainNameAppName = reverseDomainNameAppName.toLowerCase();
+                            if (iconExists(lowercasedDomainNameAppName)) {
+                                result = lowercasedDomainNameAppName;
+                            } else {
+                                const kebabNormalizedGuess = getKebabNormalizedAppName(str);
+                                if (iconExists(kebabNormalizedGuess)) {
+                                    result = kebabNormalizedGuess;
+                                } else {
+                                    const undescoreToKebabGuess = getUndescoreToKebabAppName(str);
+                                    if (iconExists(undescoreToKebabGuess)) {
+                                        result = undescoreToKebabGuess;
+                                    } else {
+                                        // Search in desktop entries
+                                        const iconSearchResults = Fuzzy.go(str, preppedIcons, { all: true, key: "name" }).map(r => r.obj.entry);
+                                        if (iconSearchResults.length > 0 && iconExists(iconSearchResults[0].icon)) {
+                                            result = iconSearchResults[0].icon;
+                                        } else {
+                                            const nameSearchResults = root.fuzzyQuery(str);
+                                            if (nameSearchResults.length > 0 && iconExists(nameSearchResults[0].icon)) {
+                                                result = nameSearchResults[0].icon;
+                                            } else {
+                                                const heuristicEntry = DesktopEntries.heuristicLookup(str);
+                                                if (heuristicEntry) result = heuristicEntry.icon;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
 
-        // Icon exists -> return as is
-        if (iconExists(str)) return str;
-
-
-        // Simple guesses
-        const lowercased = str.toLowerCase();
-        if (iconExists(lowercased)) return lowercased;
-
-        const reverseDomainNameAppName = getReverseDomainNameAppName(str);
-        if (iconExists(reverseDomainNameAppName)) return reverseDomainNameAppName;
-
-        const lowercasedDomainNameAppName = reverseDomainNameAppName.toLowerCase();
-        if (iconExists(lowercasedDomainNameAppName)) return lowercasedDomainNameAppName;
-
-        const kebabNormalizedGuess = getKebabNormalizedAppName(str);
-        if (iconExists(kebabNormalizedGuess)) return kebabNormalizedGuess;
-
-        const undescoreToKebabGuess = getUndescoreToKebabAppName(str);
-        if (iconExists(undescoreToKebabGuess)) return undescoreToKebabGuess;
-
-        // Search in desktop entries
-        const iconSearchResults = Fuzzy.go(str, preppedIcons, {
-            all: true,
-            key: "name"
-        }).map(r => {
-            return r.obj.entry
-        });
-        if (iconSearchResults.length > 0) {
-            const guess = iconSearchResults[0].icon
-            if (iconExists(guess)) return guess;
-        }
-
-        const nameSearchResults = root.fuzzyQuery(str);
-        if (nameSearchResults.length > 0) {
-            const guess = nameSearchResults[0].icon
-            if (iconExists(guess)) return guess;
-        }
-
-        // Quickshell's desktop entry lookup
-        const heuristicEntry = DesktopEntries.heuristicLookup(str);
-        if (heuristicEntry) return heuristicEntry.icon;
-
-        // Give up
-        return "application-x-executable";
+        iconCache[str] = result;
+        return result;
     }
 }

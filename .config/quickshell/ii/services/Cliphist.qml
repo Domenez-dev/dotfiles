@@ -119,7 +119,7 @@ Singleton {
 
     Timer {
         id: delayedUpdateTimer
-        interval: Config.options.hacks.arbitraryRaceConditionDelay
+        interval: 500 // Debounce clipboard updates
         repeat: false
         onTriggered: {
             root.refresh()
