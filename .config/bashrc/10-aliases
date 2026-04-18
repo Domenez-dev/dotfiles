@@ -14,6 +14,7 @@ alias sched="WINEPREFIX=~/Games/wine-pfx/ wine 'Games/wine-pfx/drive_c/Program F
 alias reddit='csvlens /home/Zakkye/Documents/other/accounts.csv'
 alias naut='nautilus . &'
 alias minecraft='java -jar /home/Zakkye/Documents/apps/TLauncher.v17/TLauncher.jar'
+alias yz='yazi'
 
 # -----------------------------------------------------
 # General

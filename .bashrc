@@ -6,6 +6,8 @@
 # with copies of files from ~/.config/zshrc
 # -----------------------------------------------------
 
+fastfetch --config examples/13
+
 # Aliasses
 alias niv="npm install vite --save-dev"
 
